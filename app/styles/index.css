@@ -1,0 +1,17 @@
+
+/**
+ * Main CSS Entry Point
+ * 
+ * This file imports all CSS files used in the application, organizing them by category.
+ * It includes base styles, component styles, button styles, scrollbar customization,
+ * and dashboard-specific styles.
+ */
+
+/* Import base styles */
+@import './base.css';
+
+/* Import component styles */
+@import './components.css';
+@import './buttons.css';
+@import './scrollbar.css';
+@import './dashboard.css';

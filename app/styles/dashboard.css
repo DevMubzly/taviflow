@@ -1,0 +1,186 @@
+
+/**
+ * Dashboard-Specific Styles
+ * 
+ * This file contains styles specifically for dashboard components and layouts.
+ * It includes metric cards, report cards, data grids, and mobile-responsive
+ * adjustments for the dashboard's UI elements.
+ */
+
+@layer components {
+  /* New Odoo/QuickBooks inspired components */
+  .metric-card {
+    @apply glass-card p-5 flex justify-between items-center border-l-4 border-indigo-500 flex-wrap sm:flex-nowrap;
+  }
+  
+  .report-card {
+    @apply glass-card p-0 overflow-hidden transition-all hover:shadow-md;
+  }
+  
+  .report-card-header {
+    @apply p-4 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white font-medium;
+  }
+  
+  .report-card-body {
+    @apply p-4;
+  }
+  
+  .data-grid {
+    @apply w-full border-collapse;
+  }
+  
+  .data-grid th {
+    @apply bg-indigo-50 text-indigo-800 font-medium px-4 py-2 text-left text-sm;
+  }
+  
+  .data-grid tr {
+    @apply border-b border-indigo-100 hover:bg-indigo-50/50 transition-colors;
+  }
+  
+  .data-grid td {
+    @apply px-4 py-3 text-sm;
+  }
+  
+  .quick-filter {
+    @apply inline-flex items-center px-3 py-1 bg-white border border-indigo-200 rounded-full text-sm text-indigo-700 hover:bg-indigo-50 transition-colors cursor-pointer mb-2 mr-2;
+  }
+  
+  .quick-filter.active {
+    @apply bg-indigo-100 border-indigo-300;
+  }
+  
+  .summary-box {
+    @apply flex flex-col p-4 bg-gradient-to-br from-indigo-500 to-indigo-700 text-white rounded-lg shadow-md;
+  }
+  
+  .summary-box-title {
+    @apply text-xs font-medium text-indigo-100 uppercase tracking-wider;
+  }
+  
+  .summary-box-value {
+    @apply text-2xl font-bold mt-1;
+  }
+  
+  .summary-box-footer {
+    @apply mt-auto text-xs text-indigo-200 pt-2;
+  }
+  
+  .dashboard-tile {
+    @apply bg-white rounded-lg p-4 border border-gray-100 shadow-sm hover:shadow-md transition-all;
+  }
+  
+  /* Mobile-specific adjustments */
+  .mobile-overflow-container {
+    @apply overflow-x-auto pb-2 -mx-6 px-6;
+  }
+  
+  .mobile-card {
+    @apply p-3 sm:p-4 md:p-5;
+  }
+  
+  .mobile-stat-value {
+    @apply text-lg sm:text-xl md:text-2xl font-bold;
+  }
+  
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4;
+  }
+  
+  .mobile-data-container {
+    @apply overflow-x-auto -mx-6 px-6 pb-2;
+  }
+  
+  .mobile-data-table {
+    @apply min-w-[640px] w-full;
+  }
+  
+  /* Stock monitor specific styles */
+  .status-badge {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .status-in-stock {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-low-stock {
+    @apply bg-amber-100 text-amber-800;
+  }
+  
+  .status-out-stock {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .tooltip {
+    @apply relative cursor-help;
+  }
+  
+  .tooltip:hover::before {
+    @apply content-[attr(data-tip)] absolute top-full mt-2 py-1 px-2 bg-gray-800 text-white text-xs rounded whitespace-nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  /* Profit calculation styles */
+  .profit-up {
+    @apply text-green-600 font-medium flex items-center;
+  }
+  
+  .profit-down {
+    @apply text-red-600 font-medium flex items-center;
+  }
+  
+  .profit-neutral {
+    @apply text-gray-600 font-medium flex items-center;
+  }
+  
+  .profit-badge {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .profit-badge-high {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .profit-badge-medium {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .profit-badge-low {
+    @apply bg-amber-100 text-amber-800;
+  }
+  
+  .profit-badge-loss {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  /* Tax calculator styles */
+  .tax-input {
+    @apply w-full h-9 rounded-md border border-input px-3 py-2 text-sm shadow-sm;
+  }
+  
+  .tax-card {
+    @apply p-4 rounded-lg border border-gray-200 shadow-sm;
+  }
+  
+  .tax-badge {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .tax-due-soon {
+    @apply bg-amber-100 text-amber-800;
+  }
+  
+  .tax-overdue {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .tax-paid {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .tax-upcoming {
+    @apply bg-gray-100 text-gray-800;
+  }
+}

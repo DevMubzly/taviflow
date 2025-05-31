@@ -1,0 +1,28 @@
+
+/**
+ * Button Style Definitions
+ * 
+ * This file contains custom button styles used throughout the application.
+ * It defines gradient effects, glass-like buttons, and other interactive elements
+ * that follow the application's design system.
+ */
+
+@layer components {
+  /* Indigo gradient button */
+  .purple-gradient-btn {
+    @apply relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium transition-all bg-white rounded-md hover:bg-white group;
+  }
+  
+  .purple-gradient-btn::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-600 to-indigo-900 opacity-0 transition-opacity duration-300 group-hover:opacity-100;
+  }
+  
+  .purple-gradient-btn span {
+    @apply relative z-10 text-indigo-700 transition-colors duration-300 group-hover:text-white;
+  }
+  
+  /* Purple glass effect */
+  .purple-glass {
+    @apply bg-white/40 backdrop-blur-md border border-indigo-200/50 shadow-sm hover:shadow-indigo-200/30;
+  }
+}

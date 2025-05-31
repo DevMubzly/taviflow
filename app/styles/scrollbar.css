@@ -1,0 +1,39 @@
+
+/**
+ * Custom Scrollbar Styling
+ * 
+ * This file defines the appearance of scrollbars throughout the application,
+ * using a custom design that matches the application's theme.
+ * It applies to all scrollable content for a consistent experience.
+ */
+
+@layer utilities {
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.3);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.5);
+  }
+  
+  /* Table scrollable areas */
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .overflow-y-auto::-webkit-scrollbar {
+    width: 6px;
+  }
+}
